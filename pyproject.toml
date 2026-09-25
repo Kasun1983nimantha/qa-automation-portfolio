@@ -1,0 +1,15 @@
+[tool.pytest.ini_options]
+testpaths = ["ui-tests/tests"]
+pythonpath = ["ui-tests"]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+  "smoke: critical login and purchase journeys",
+  "regression: full functional regression suite",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
