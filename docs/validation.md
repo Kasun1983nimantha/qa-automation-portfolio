@@ -18,7 +18,16 @@ The temporary diagnostic probe deliberately failed one assertion and one fixture
 
 ## CI evidence
 
-The initial GitHub Actions run will validate the published commit on Ubuntu with Python 3.12, Chrome, and Firefox. Consult the [Actions run list](https://github.com/Kasun1983nimantha/qa-automation-portfolio/actions) for status and downloadable reports. Local passes do not imply a CI pass.
+[GitHub Actions run #1](https://github.com/Kasun1983nimantha/qa-automation-portfolio/actions/runs/36078999422) passed for code commit `c3b277e2879e0a2e40c845765dab1f8b660557a0` on Ubuntu with Python 3.12:
+
+| CI job | Observed result |
+| --- | --- |
+| Code quality | Lint and formatting passed |
+| Chrome regression | 19 passed in 26.56 seconds |
+| Firefox regression | 19 passed in 100.00 seconds |
+| Report uploads | Both browser artifacts uploaded successfully |
+
+Artifacts are named `selenium-chrome-1` and `selenium-firefox-1` and expire after the workflow's 14-day retention period. The test code is unchanged in the subsequent documentation/ignore-file update; that update skips CI. Future runs are available in the [Actions run list](https://github.com/Kasun1983nimantha/qa-automation-portfolio/actions).
 
 ## Reproduce
 
